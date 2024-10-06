@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>My website</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            line-height: 1.6;  
+            margin: 0;  
+            padding: 20px;  
+            background-color: #f0f0f0;  
+        }  
+        header {  
+            background: #4CAF50;  
+            color: white;  
+            padding: 10px 0;  
+            text-align: center;  
+        }  
+        button {  
+            padding: 10px;  
+            margin-top: 20px;  
+            background-color: #4CAF50;  
+            color: white;  
+            border: none;  
+            cursor: pointer;  
+        }  
+        button:hover {  
+            background-color: #45a049;  
+        }  
+        .content {  
+            margin: 20px 0;  
+            padding: 10px;  
+            background-color: #fff;  
+            border-radius: 5px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<header>  
+    <h1 id="main-title">Chào bạn ??</h1>  
+</header>  
+
+<div class="content">  
+    <p id="description">Tôi biết bạn là người đáng yêu vì bạn đã ấn vô đường link này , nhưng tôi cũng thấy bạn khá ngu thì phải =))</p> 
+    <p><em>Tôi kco ý chê nhưng nếu bạn vừa cute vừa thông minh nữa thì còn gì tuyệt vời hơn</em></p>
+    <p><em>Yên tâm tôi sẽ giúp bạn :33 </em></p> 
+</div>  
+
+<button onclick="toggleContent()">Ấn vào đây nhé bạn sẽ có giải pháp <3</button>  
+
+<footer>  
+    
+</footer>  
+
+<script>  
+    let isOriginalContent = true;  
+
+    const content = {  
+        original: {  
+            title: "Chào bạn ??",  
+            description: "Tôi biết bạn là người đáng yêu vì bạn đã ấn vô đường link này , nhưng tôi cũng thấy bạn khá ngu thì phải =))."
+            description: "Tôi kco ý chê nhưng nếu bạn vừa cute vừa thông minh nữa thì còn gì tuyệt vời hơn"
+        },  description: "Yên tâm tôi sẽ giúp bạn :33"
+        new: {  
+            title: "Bạn chọn đúng nơi rồi đấy muhaha",  
+            description: "Bạn nghĩ nguyên nhân bạn ngu là gì ?" 
+            description: "Bạn không biết chứ gì ? Đương nhiên vì 0 biết nên bạn mới tới được trang này , có thể bạn 0 biết nhưng mà bạn ngu từ đầu khi mà tốn time đọc từ đó đến giờ :)))"
+            description: "Nhưng bạn có thể 0 biết , đôi khi ngu ngu cũng góp phần trông bạn cute hơn..."
+        
+        }  
+    };  
+
+    function toggleContent() {  
+        if (isOriginalContent) {  
+            document.getElementById('main-title').innerText = content.new.title;  
+            
+            document.getElementById('description').innerText = content.new.description;
+            document.getElementById('description').innerText = content.new.description;
+        } else {  
+            document.getElementById('main-title').innerText = content.original.title;  
+            document.getElementById('description').innerText = content.original.description;  
+            document.getElementById('description').innerText = content.original.description; 
+            document.getElementById('description').innerText = content.original.description; 
+        }  
+        isOriginalContent = !isOriginalContent; // Chuyển trạng thái  
+    }  
+</script>  
+
+</body>  
+</html>
